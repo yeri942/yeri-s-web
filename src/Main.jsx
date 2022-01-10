@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import mainImg from "./img/pinksky.jpg";
 import Fade from "react-reveal/Fade";
 
 const Main = () => {
@@ -19,7 +18,7 @@ const Main = () => {
 
 const MainWrab = styled.div`
     top: 0;
-    background-image: url(${mainImg});
+    background-image: url("/img/pinksky.jpg");
     min-width: 100%;
     min-height: 100vh;
     background-size: cover;
