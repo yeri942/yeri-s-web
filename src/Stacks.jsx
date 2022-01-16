@@ -15,7 +15,12 @@ const Stacks = () => {
             </h1>
             <div>
                 <Circle />
-                <div>HTML,CSS,Js,React</div>
+                <StacksContainer>
+                    <StackImg src="./img/HTML_CSS.png" />
+                    <StackImg src="./img/JS.png" />
+                    <StackImg src="./img/Node_js.png" />
+                    <StackImg src="./img/GitLab.png" />
+                </StacksContainer>
             </div>
         </WrabbedStack>
     );
@@ -33,5 +38,15 @@ const Circle = styled.div`
     border-radius: 50%;
     background-color: rgb(204, 232, 241);
     z-index: -100;
+`;
+const StacksContainer = styled.div`
+    width: 40%;
+    height: 200px;
+    padding: 50px 70px;
+    border: 3px solid black;
+`;
+
+const StackImg = styled.img`
+    height: 100px;
 `;
 export default Stacks;
