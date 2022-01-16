@@ -33,8 +33,8 @@ const MainWrab = styled.div`
 
 const Mainment = styled.div`
     display: inline-block;
-    color: rgb(43, 66, 109);
     font-size: 90px;
+    margin: 10px;
 `;
 const Cloud1 = styled.img`
     position: absolute;

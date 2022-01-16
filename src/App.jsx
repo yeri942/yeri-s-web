@@ -3,9 +3,10 @@ import Nav from "./Nav";
 import Main from "./Main";
 import AboutMe from "./AboutMe";
 import Stacks from "./Stacks";
+import "./App.css";
 function App() {
     return (
-        <div>
+        <div className="App">
             <Nav />
             <Main />
             <AboutMe />
