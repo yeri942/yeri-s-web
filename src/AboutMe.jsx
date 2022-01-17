@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Rotate from "react-reveal/Rotate";
 
 const AboutMe = () => {
+    // const [start, setStart] = useState(false);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setStart(true);
+    //     }, 1000);
+    //     console.log(start);
+    // });
     return (
         <BodyOfAboutMe>
-            <h1
-                style={{
-                    margin: "0 0 50px 20px",
-                    zIndex: "100",
-                    position: "absolute",
-                    top: "-30px",
-                    backgroundColor: "rgba(255, 255, 255, 0.8)",
-                }}
-            >
-                About Me
-            </h1>
+            <h1 className="left_H1">About Me</h1>
             <WrabbedAboutMe>
                 <Rotate top left>
                     <Circle />
@@ -53,9 +50,10 @@ const AboutMe = () => {
         </BodyOfAboutMe>
     );
 };
+
 const BodyOfAboutMe = styled.div`
     position: relative;
-    margin: 300px 0 0 50px;
+    margin: 200px 0 0 50px;
 `;
 const WrabbedAboutMe = styled.div`
     display: flex;
@@ -64,6 +62,7 @@ const WrabbedAboutMe = styled.div`
 `;
 const MeImg = styled.img`
     width: 300px;
+    margin: 0 0 0 90px;
 `;
 const Title = styled.span`
     font-weight: 900;
@@ -89,7 +88,7 @@ const AboutMeMent = styled.div`
 const Circle = styled.div`
     position: absolute;
     left: -180px;
-    top: -450px;
+    top: -400px;
     width: 700px;
     height: 700px;
     border-radius: 50%;
