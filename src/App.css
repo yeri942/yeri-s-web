@@ -18,3 +18,8 @@ h1 {
     top: 35vh;
     transform: rotate(-90deg);
 }
+
+.left_content {
+    position: relative;
+    margin: 200px 0 0 50px;
+}
