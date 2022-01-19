@@ -25,10 +25,10 @@ const Main = () => {
 const MainWrab = styled.div`
     position: relative;
     top: 0;
-    background-color: lightblue;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     text-align: center;
+    background: linear-gradient(to top, white 5%, lightblue 20%);
 `;
 
 const Mainment = styled.div`
