@@ -12,11 +12,10 @@ const AboutMe = () => {
 
     useEffect(() => {
         console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
-        if (ScrollY > 700) {
+        if (ScrollY > 600) {
             setTimeout(() => {
                 setStart(true);
             }, 200);
-            console.log(start);
         }
     }, [ScrollY]);
 
@@ -34,11 +33,12 @@ const AboutMe = () => {
             <h1 className="left_H1">About Me</h1>
             <WrabbedAboutMe>
                 <Rotate top left>
-                    <Circle />
+                    <Circle className="left_circle" />
                 </Rotate>
                 {start ? (
-                    <Fade bottom cascade>
+                    <Fade>
                         <MeImg src="/img/me.png" />
+
                         <AboutMeMent>
                             <Title>
                                 아름다움을 프로그래밍하는 개발자
@@ -80,7 +80,10 @@ const WrabbedAboutMe = styled.div`
 const MeImg = styled.img`
     width: 300px;
     margin: 0 0 0 90px;
+    border-radius: 0px 100px / 120px;
+    // box-shadow: 5px 5px rgb(139, 179, 194);
 `;
+
 const Title = styled.span`
     font-weight: 900;
     font-size: 25px;
@@ -103,13 +106,6 @@ const AboutMeMent = styled.div`
 `;
 
 const Circle = styled.div`
-    position: absolute;
-    left: -180px;
     top: -400px;
-    width: 700px;
-    height: 700px;
-    border-radius: 50%;
-    background-color: rgb(204, 232, 241);
-    z-index: -100;
 `;
 export default AboutMe;
