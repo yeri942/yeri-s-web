@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const Main = () => {
+    const [ment, setMent] = useState("");
+
+    const mentList = ["성장하는", "도전적인", "섬세한"];
+    let n = 0;
+    const changeMent = () => {
+        setInterval(() => {
+            n = parseInt(Math.random() * mentList.length);
+            setMent(mentList[n]);
+        }, 3000);
+    };
+    changeMent();
     return (
         <MainWrab>
             <Fade>
@@ -13,7 +24,7 @@ const Main = () => {
                 <div style={{ paddingTop: "28vh" }}>
                     <Mainment>안녕하세요</Mainment>
                     <br />
-                    <Mainment>프론트엔드 개발자</Mainment>
+                    <Mainment>{ment} 개발자</Mainment>
                     <br />
                     <Mainment>김예리입니다.</Mainment>
                 </div>
