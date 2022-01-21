@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
 const Main = () => {
-    const [ment, setMent] = useState("");
+    const [ment, setMent] = useState("기본");
 
     const mentList = ["성장하는", "도전적인", "섬세한"];
     let n = 0;
