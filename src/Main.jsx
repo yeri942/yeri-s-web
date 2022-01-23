@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import Fade from "react-reveal/Fade";
@@ -17,7 +16,7 @@ const Main = () => {
                 n += 1;
             }
         }, 3000);
-    }, []);
+    }, [n]);
     return (
         <MainWrab>
             <Fade>
@@ -46,6 +45,7 @@ const MainWrab = styled.div`
     height: 110vh;
     text-align: center;
     background: linear-gradient(to top, white 5%, lightblue 20%);
+    font-family: "Song Myung", serif;
 `;
 
 const MentFade = keyframes`
@@ -66,23 +66,55 @@ const ChangeMent = styled.span`
     animation: ${MentFade} 3s linear 0s infinite;
 `;
 const Mainment = styled.div`
+    position: relative;
     display: inline-block;
     font-size: 90px;
     margin: 10px;
     color: white;
-    text-shadow: 0px 0px 10px rgba(25, 107, 134, 0.8);
+    text-shadow: 0px 0px 10px rgba(25, 107, 134, 0.3);
 `;
 
+const CloudDungsil1 = keyframes`
+0% {
+    top: 430px;
+}
+50%{
+    top: 420px;
+    right: 9.8%;
+}
+100% {
+    top: 415px;
+    right: 10.2%;
+}
+`;
 const Cloud1 = styled.img`
     position: absolute;
-    right: 15%;
+    right: 10%;
     top: 430px;
-    height: 250px;
+    height: 300px;
+    animation: ${CloudDungsil1} 4s linear 0s infinite alternate;
+`;
+
+const CloudDungsil2 = keyframes`
+0% {
+    top: 200px;
+}
+50%{
+    top: 205px;
+    left: 12.8%;
+}
+100% {
+    top: 195px;
+    left: 13.2%;
+}
 `;
 const Cloud2 = styled.img`
     position: absolute;
-    left: 18%;
-    top: 250px;
-    height: 200px;
+    left: 13%;
+    top: 200px;
+    height: 250px;
+    z-index: 100;
+
+    animation: ${CloudDungsil2} 6s linear 0s infinite alternate;
 `;
 export default Main;
