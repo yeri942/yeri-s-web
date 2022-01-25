@@ -32,6 +32,7 @@ h1 {
     border-radius: 50%;
     background-color: rgb(204, 232, 241);
     z-index: -100;
+    box-shadow: 0px 0px 20px rgb(204, 232, 241);
 }
 
 .right_H1 {
@@ -48,6 +49,7 @@ h1 {
     border-radius: 50%;
     background-color: rgb(204, 232, 241);
     z-index: -100;
+    box-shadow: 0px 0px 20px rgb(204, 232, 241);
 }
 
 .right_content {
